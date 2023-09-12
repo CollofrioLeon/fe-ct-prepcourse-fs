@@ -181,7 +181,20 @@ function mesesDelAño(array) {
    // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
+   if (array.indexOf("Enero")<0 || array.indexOf("Marzo")<0 || array.indexOf("Noviembre")<0){
+      return "No se encontraron los meses pedidos"
+   }
+   let eneroPosision = array.indexOf("Enero");
+   let marzoPosision = array.indexOf("Marzo");
+   let noviembrePosision = array.indexOf("Noviembre");
+   let newArray =[];
+   newArray.push(array[eneroPosision]);
+   newArray.push(array[marzoPosision]);
+   newArray.push(array[noviembrePosision]);
+   return newArray;
+      
    
+
 }
 
 function tablaDelSeis() {
